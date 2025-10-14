@@ -16,7 +16,7 @@ class C:
         return f'x={x}'
     
     @classmethod
-    def cm(cls):                # 클래스 메서드 : cls 전달
+    def cm(cls):               # 클래스 메서드 : cls 전달
         return f'cls={cls.__name__}'
 
 ## -------------------------------------------------------------------------
