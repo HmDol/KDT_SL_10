@@ -1,0 +1,13 @@
+emp_id,department,rank,gender,salary
+101,Sales,Jr,M,3500
+102,Sales,Sr,F,5200
+103,HR,Jr,F,3300
+104,HR,Sr,M,5400
+105,IT,Jr,M,4000
+106,IT,Sr,F,6100
+107,IT,Mgr,M,8200
+108,Finance,Jr,F,3900
+109,Finance,Sr,M,6000
+110,Sales,Mgr,F,9100
+111,HR,Mgr,M,8700
+112,IT,Sr,F,6500
