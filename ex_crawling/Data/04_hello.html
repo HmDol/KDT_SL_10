@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--브라우저 탭부분 출력-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025-11-20</title>
+    <!-- 웹 페이지 디자인적인 요소 설정. 태크마다 지정 가능 -->
+    <!-- #id명 {스타일설정값들}    -->
+    <style>
+        /* CSS Selector : 태그의 id, class속성 및 태그명으로 페이지 내 태그 선택.  */
+        #section1 { background-color: greenyellow; }
+        #section2 { background-color: coral; }
+        #section3 { background-color: darkkhaki; }
+        #section4 { background-color: yellow; }
+        #s1       { background-color: red;}
+        #s2       { background-color: blue;}
+        #s3       { background-color: green;}
+        
+        .A   {font-style: italic; font-size: xx-large; color:rgb(15, 241, 222);}
+    </style>
+</head>
+<body>
+    <!-- 브라우저 내용/컨텐츠 부분 -->
+
+    <!-- Header Line의 H 태그 : 크게 굵게 자동줄바꿈 -->
+    <h1>태그들 식별위한 속성 id, class</h1>
+    - id속성    : 웹 페이지 안에 유니크/유일해야 함 <br>
+    - class속성 : 여러개 태그에 동일한 적용 및 관리를 위한 속성<br><br>
+
+    <!-- div 태그 : 웹 페이지 화면 분할/블록 지정 태그  -->
+    <div id="section1" class="A">첫 번째 영역 - 페이지이동 네비게이션 </div> 
+    <div id="section2">두 번째 영역 - 뉴스</div> 
+    <div id="section3" class="A">세 번째 영역 - 날씨</div> 
+    <div id="section4">네 번째 영역 - 증시</div>
+
+    <!-- span 태그: 내용만큼만 영역 지정, 줄바꿈 안됨!  -->
+    <span id="s1" class="A">span1Goo~~~~~~~~D</span> 
+    <span id="s2">span2</span> 
+    <span id="s3">span3</span>
+
+</body>
+</html>
