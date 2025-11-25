@@ -1,7 +1,7 @@
 import re
 from selenium import webdriver                           ## 웹페이지 드라이버 사용하기 위한 라이브러리
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service    ## 크롬 브라우저 서비스 모듈
+from selenium.webdriver.chrome.options import Options    ## 크롬 브라우저 옵션 설정 모듈
 from bs4 import BeautifulSoup                           ## html 코드 가져오기 위한 라이브러리
 import pandas as pd
 import time
