@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kdt008\\Desktop\\KDT_10SL\\EX_C\\DAY01\\EX_01\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A9A7A5FA-CD8A-4843-A087-9048FC50447B}|EX_01\\EX_01.vcxproj|C:\\Users\\kdt008\\Desktop\\KDT_10SL\\EX_C\\DAY01\\EX_01\\EX_01\\hello.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A9A7A5FA-CD8A-4843-A087-9048FC50447B}|EX_01\\EX_01.vcxproj|solutionrelative:EX_01\\hello.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "hello.c",
+              "DocumentMoniker": "C:\\Users\\kdt008\\Desktop\\KDT_10SL\\EX_C\\DAY01\\EX_01\\EX_01\\hello.c",
+              "RelativeDocumentMoniker": "EX_01\\hello.c",
+              "ToolTip": "C:\\Users\\kdt008\\Desktop\\KDT_10SL\\EX_C\\DAY01\\EX_01\\EX_01\\hello.c",
+              "RelativeToolTip": "EX_01\\hello.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-12-06T00:36:46.952Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
