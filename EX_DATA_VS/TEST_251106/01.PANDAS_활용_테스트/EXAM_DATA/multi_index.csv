@@ -1,0 +1,9 @@
+class,number,subject,mid,final
+A,1,math,80,90
+A,1,eng,85,92
+A,2,math,78,85
+B,1,eng,88,91
+B,2,math,75,83
+B,2,eng,82,88
+B,3,math,90,95
+C,1,eng,84,89

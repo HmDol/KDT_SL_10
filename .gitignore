@@ -1,0 +1,7 @@
+*.csv
+*.excel
+*.js
+# Visual Studio
+.vs/
+*.zip
+*.zip
