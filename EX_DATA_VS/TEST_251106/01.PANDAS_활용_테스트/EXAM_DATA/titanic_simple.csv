@@ -1,0 +1,11 @@
+name,age,sex,survived
+Allen,22.0,male,0
+Baker,38.0,female,1
+Clark,26.0,male,1
+Davis,,female,1
+Evans,35.0,male,0
+Fisher,28.0,female,1
+Green,,female,0
+Hill,19.0,male,0
+Irwin,54.0,male,1
+Jones,2.0,female,1

@@ -1,0 +1,9 @@
+city,gender,quarter,sales
+Seoul,M,Q1,120
+Seoul,F,Q1,150
+Seoul,M,Q2,180
+Busan,M,Q2,160
+Busan,F,Q3,140
+Busan,F,Q4,200
+Daegu,M,Q3,170
+Daegu,F,Q4,210
