@@ -15,22 +15,40 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ex01_sign_op.c">
+    <ClCompile Include="ex01_address.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ex02_inc_dec_op.c">
+    <ClCompile Include="ex02_condition_op.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ex03_inc_dec_op.c">
+    <ClCompile Include="ex03_assign_op.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ex04_compare_op.c">
+    <ClCompile Include="ex04_if.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ex05_compare.c">
+    <ClCompile Include="ex05_if.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ex06_logical_op.c">
+    <ClCompile Include="ex06_if_else.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ex07_if_elseif_else.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ex08_nested_if.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ex09_switch_case.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ex10_switch_case.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ex11_for.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ex12_for.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
