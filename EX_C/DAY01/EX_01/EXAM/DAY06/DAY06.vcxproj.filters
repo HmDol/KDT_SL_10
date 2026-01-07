@@ -27,7 +27,7 @@
     <ClCompile Include="myfunc.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\..\Downloads\exam0105_basic_C_김힘찬.c">
+    <ClCompile Include="260106_C_test_김힘찬.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

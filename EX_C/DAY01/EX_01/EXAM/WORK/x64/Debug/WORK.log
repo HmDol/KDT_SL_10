@@ -1,1 +1,4 @@
-﻿
+﻿  0105_work_김힘찬.c
+C:\Users\kdt008\Desktop\KDT_10SL\EX_C\DAY01\EX_01\EXAM\WORK\0105_work_김힘찬.c(114,7): warning C4013: 'strcmp'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\kdt008\Desktop\KDT_10SL\EX_C\DAY01\EX_01\EXAM\WORK\0105_work_김힘찬.c(125,2): warning C4098: 'q5_14': 'void' 함수에서 값을 반환하고 있습니다.
+  WORK.vcxproj -> C:\Users\kdt008\Desktop\KDT_10SL\EX_C\DAY01\EX_01\EXAM\x64\Debug\WORK.exe
