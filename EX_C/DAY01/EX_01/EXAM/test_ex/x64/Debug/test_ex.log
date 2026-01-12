@@ -1,6 +1,7 @@
 ﻿  exam01_datatype_answer.c
-C:\Users\kdt008\Downloads\DAY0104-20260104T233423Z-3-001\DAY0104\answer\exam01_datatype_answer.c(147,13): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   exam02_operator_answer.c
+  exam03_condition_answer.c
+C:\Users\kdt008\Downloads\DAY0104-20260104T233423Z-3-001\DAY0104\answer\exam01_datatype_answer.c(147,13): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\kdt008\Downloads\DAY0104-20260104T233423Z-3-001\DAY0104\answer\exam02_operator_answer.c(74,13): warning C4476: 'printf' : 서식 지정자에 알 수 없는 형식 필드 문자 '\xea'이(가) 있습니다.
 C:\Users\kdt008\Downloads\DAY0104-20260104T233423Z-3-001\DAY0104\answer\exam02_operator_answer.c(78,14): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\kdt008\Downloads\DAY0104-20260104T233423Z-3-001\DAY0104\answer\exam02_operator_answer.c(105,14): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
@@ -13,7 +14,6 @@ C:\Users\kdt008\Downloads\DAY0104-20260104T233423Z-3-001\DAY0104\answer\exam02_o
 C:\Users\kdt008\Downloads\DAY0104-20260104T233423Z-3-001\DAY0104\answer\exam02_operator_answer.c(224,14): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\kdt008\Downloads\DAY0104-20260104T233423Z-3-001\DAY0104\answer\exam02_operator_answer.c(227,14): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\kdt008\Downloads\DAY0104-20260104T233423Z-3-001\DAY0104\answer\exam02_operator_answer.c(244,14): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  exam03_condition_answer.c
 C:\Users\kdt008\Downloads\DAY0104-20260104T233423Z-3-001\DAY0104\answer\exam03_condition_answer.c(83,6): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\kdt008\Downloads\DAY0104-20260104T233423Z-3-001\DAY0104\answer\exam03_condition_answer.c(98,6): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\kdt008\Downloads\DAY0104-20260104T233423Z-3-001\DAY0104\answer\exam03_condition_answer.c(120,6): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
