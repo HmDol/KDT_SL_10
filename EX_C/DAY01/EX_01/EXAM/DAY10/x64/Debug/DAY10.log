@@ -1,0 +1,3 @@
+﻿  ex06_struct.c
+C:\Users\kdt008\Desktop\KDT_10SL\EX_C\DAY01\EX_01\EXAM\DAY10\ex06_struct.c(41,10): warning C4101: 'st2' :참조되지 않은 지역 변수입니다.
+  DAY10.vcxproj -> C:\Users\kdt008\Desktop\KDT_10SL\EX_C\DAY01\EX_01\EXAM\x64\Debug\DAY10.exe
