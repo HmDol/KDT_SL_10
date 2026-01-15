@@ -28,7 +28,7 @@ void printField(const Student* const ptr) {
 	printf("%d, %d, %d, %d\n", ptr->no, ptr->kor, ptr->eng, ptr->math);
 	Student ss = { 0 };
 	// ptr = &ss;
-
+	 
 	//ptr->math = 77;
 	//ptr->kor = 92;
 
