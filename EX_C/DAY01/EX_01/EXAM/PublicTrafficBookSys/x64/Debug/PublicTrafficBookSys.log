@@ -1,0 +1,13 @@
+﻿  bus_func.c
+  train_func.c
+  ship_func.c
+C:\Users\kdt008\OneDrive\바탕 화면\KDT_10SL\EX_C\DAY01\EX_01\EXAM\PublicTrafficBookSys\bus_func.c(82,13): warning C4013: 'strcmp'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\kdt008\OneDrive\바탕 화면\KDT_10SL\EX_C\DAY01\EX_01\EXAM\PublicTrafficBookSys\bus_func.c(193,5): warning C4013: 'exit'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\kdt008\OneDrive\바탕 화면\KDT_10SL\EX_C\DAY01\EX_01\EXAM\PublicTrafficBookSys\bus_func.c(222,13): warning C4098: 'busStart': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\kdt008\OneDrive\바탕 화면\KDT_10SL\EX_C\DAY01\EX_01\EXAM\PublicTrafficBookSys\train_func.c(68,4): warning C4098: 'trainStart': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\kdt008\OneDrive\바탕 화면\KDT_10SL\EX_C\DAY01\EX_01\EXAM\PublicTrafficBookSys\train_func.c(73,2): warning C4098: 'trainStart': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\kdt008\OneDrive\바탕 화면\KDT_10SL\EX_C\DAY01\EX_01\EXAM\PublicTrafficBookSys\train_func.c(171,3): warning C4098: 'trainlist': 'void' 함수에서 값을 반환하고 있습니다.
+  main.c
+  planeFunc.c
+  코드를 생성하고 있습니다...
+  PublicTrafficBookSys.vcxproj -> C:\Users\kdt008\OneDrive\바탕 화면\KDT_10SL\EX_C\DAY01\EX_01\EXAM\x64\Debug\PublicTrafficBookSys.exe

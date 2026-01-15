@@ -1,6 +1,1 @@
-﻿  ex06_func_pointer.c
-  ex07_func_pointer.c
-  코드를 생성하고 있습니다...
-C:\Users\kdt008\Desktop\KDT_10SL\EX_C\DAY01\EX_01\EXAM\DAY09\ex06_func_pointer.c(13,11): warning C4244: 'return': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\kdt008\Desktop\KDT_10SL\EX_C\DAY01\EX_01\EXAM\DAY09\ex06_func_pointer.c(25,8): warning C4133: '초기화 중': 'float (__cdecl *)(int,int)'과(와) 'int (__cdecl *)(int,int)' 사이의 형식이 호환되지 않습니다.
-C:\Users\kdt008\Desktop\KDT_10SL\EX_C\DAY01\EX_01\EXAM\DAY09\ex07_func_pointer.c(8,1): error C2143: 구문 오류: ';'이(가) '}' 앞에 없습니다.
+﻿
