@@ -30,6 +30,9 @@
     <ClCompile Include="0108_ch8_work_김힘찬.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="0115_work_김힘찬.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="1016_work_김힘찬_header.h">
