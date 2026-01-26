@@ -1,139 +1,187 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-typedef struct Person {
-    char phoneNo[14];   // "010-1234-5678" (13 chars + '\0')
-    char name[10];      // 한글 3~4글자면 멀티바이트로 더 클 수 있음(주의)
-    struct Person* next;
-} Person;
+// ===============================
+// Circular Doubly Linked List
+// - head is a sentinel (dummy) node
+// ===============================
 
-// ===== 유틸 =====
-static Person* createNode(const char* phoneNo, const char* name) {
-    Person* node = (Person*)malloc(sizeof(Person));
-    if (!node) {
-        printf("메모리 할당 실패\n");
+typedef struct Node {
+    int data;
+    struct Node* prev;
+    struct Node* next;
+} Node;
+
+// ---------- Utility ----------
+static void* xmalloc(size_t sz) {
+    void* p = malloc(sz);
+    if (!p) {
+        perror("malloc");
         exit(1);
     }
-    strncpy(node->phoneNo, phoneNo, sizeof(node->phoneNo) - 1);
-    node->phoneNo[sizeof(node->phoneNo) - 1] = '\0';
-
-    strncpy(node->name, name, sizeof(node->name) - 1);
-    node->name[sizeof(node->name) - 1] = '\0';
-
-    node->next = NULL;
-    return node;
+    return p;
 }
 
-void printList(const Person* head) {
-    printf("\n[전화번호부]\n");
-    printf("---------------------------------\n");
-    const Person* cur = head;
-    while (cur != NULL) {
-        printf("%s (%s)\n", cur->name, cur->phoneNo);
-        cur = cur->next;
-    }
-    printf("---------------------------------\n");
+Node* create_list(void) {
+    Node* head = (Node*)xmalloc(sizeof(Node));
+    head->data = 0;                 // dummy
+    head->prev = head;
+    head->next = head;
+    return head;
 }
 
-void freeList(Person* head) {
-    while (head != NULL) {
-        Person* tmp = head;
-        head = head->next;
-        free(tmp);
+int is_empty(Node* head) {
+    return head->next == head;
+}
+
+int size(Node* head) {
+    int cnt = 0;
+    for (Node* cur = head->next; cur != head; cur = cur->next) cnt++;
+    return cnt;
+}
+
+// index: 0..(size-1)
+// return: pointer to node at index, or NULL if out of range
+Node* get_node_at(Node* head, int index) {
+    if (index < 0) return NULL;
+
+    int n = size(head);
+    if (index >= n) return NULL;
+
+    // 약간 최적화: 앞/뒤 중 가까운 쪽으로 이동
+    if (index <= n / 2) {
+        Node* cur = head->next;
+        for (int i = 0; i < index; i++) cur = cur->next;
+        return cur;
+    }
+    else {
+        Node* cur = head->prev;
+        for (int i = n - 1; i > index; i--) cur = cur->prev;
+        return cur;
     }
 }
 
-// ===== 1) addBack: 맨 뒤에 추가 =====
-void addBack(Person** head, const char* phoneNo, const char* name) {
-    Person* newNode = createNode(phoneNo, name);
+// ---------- Insert ----------
+void insert_before(Node* pos, int value) {
+    Node* node = (Node*)xmalloc(sizeof(Node));
+    node->data = value;
 
-    if (*head == NULL) {
-        *head = newNode;
-        return;
-    }
+    node->prev = pos->prev;
+    node->next = pos;
 
-    Person* cur = *head;
-    while (cur->next != NULL) {
-        cur = cur->next;
-    }
-    cur->next = newNode;
+    pos->prev->next = node;
+    pos->prev = node;
 }
 
-// ===== 2) delete: phoneNo로 삭제 =====
-int deleteByPhone(Person** head, const char* phoneNo) {
-    if (*head == NULL) return 0;
+// insert at index (0..size)
+int insert_at(Node* head, int index, int value) {
+    int n = size(head);
+    if (index < 0 || index > n) return 0;
 
-    Person* cur = *head;
-    Person* prev = NULL;
+    if (index == n) {
+        // append: insert before head (tail position)
+        insert_before(head, value);
+        return 1;
+    }
+    else {
+        Node* pos = get_node_at(head, index);
+        insert_before(pos, value);
+        return 1;
+    }
+}
 
-    while (cur != NULL) {
-        if (strcmp(cur->phoneNo, phoneNo) == 0) {
-            // 삭제 대상 발견
-            if (prev == NULL) {
-                // 첫 노드 삭제
-                *head = cur->next;
-            }
-            else {
-                prev->next = cur->next;
-            }
+void push_back(Node* head, int value) {
+    insert_before(head, value);
+}
+
+// ---------- Delete ----------
+int delete_at(Node* head, int index) {
+    Node* target = get_node_at(head, index);
+    if (!target) return 0;
+
+    target->prev->next = target->next;
+    target->next->prev = target->prev;
+    free(target);
+    return 1;
+}
+
+
+int delete_value(Node* head, int value) {
+    for (Node* cur = head->next; cur != head; cur = cur->next) {
+        if (cur->data == value) {
+            cur->prev->next = cur->next;
+            cur->next->prev = cur->prev;
             free(cur);
-            return 1; // 삭제 성공
+            return 1;
         }
-        prev = cur;
-        cur = cur->next;
     }
-    return 0; // 못 찾음
+    return 0;
 }
 
-// ===== 3) update: phoneNo로 찾아 수정 =====
-// 새 번호를 ""(빈 문자열)로 주면 번호 수정 안 함 같은 정책도 가능하지만,
-// 여기서는 둘 다 수정한다고 가정.
-int updateByPhone(Person* head, const char* targetPhone, const char* newName, const char* newPhone) {
-    Person* cur = head;
-    while (cur != NULL) {
-        if (strcmp(cur->phoneNo, targetPhone) == 0) {
-            strncpy(cur->name, newName, sizeof(cur->name) - 1);
-            cur->name[sizeof(cur->name) - 1] = '\0';
-
-            strncpy(cur->phoneNo, newPhone, sizeof(cur->phoneNo) - 1);
-            cur->phoneNo[sizeof(cur->phoneNo) - 1] = '\0';
-
-            return 1; // 수정 성공
-        }
-        cur = cur->next;
-    }
-    return 0; // 못 찾음
+// ---------- Update ----------
+int update_at(Node* head, int index, int new_value) {
+    Node* target = get_node_at(head, index);
+    if (!target) return 0;
+    target->data = new_value;
+    return 1;
 }
 
-// ===== 테스트 main =====
+
+int update_value(Node* head, int old_value, int new_value) {
+    for (Node* cur = head->next; cur != head; cur = cur->next) {
+        if (cur->data == old_value) {
+            cur->data = new_value;
+            return 1;
+        }
+    }
+    return 0;
+}
+
+// ---------- Print / Free ----------
+void print_list(Node* head) {
+    printf("[ ");
+    for (Node* cur = head->next; cur != head; cur = cur->next) {
+        printf("%d ", cur->data);
+    }
+    printf("]\n");
+}
+
+void free_list(Node* head) {
+    Node* cur = head->next;
+    while (cur != head) {
+        Node* nxt = cur->next;
+        free(cur);
+        cur = nxt;
+    }
+    free(head);
+}
+
+// ===============================
+// Demo
+// ===============================
 int main(void) {
-    Person* head = NULL;
+    Node* head = create_list();
 
-    addBack(&head, "010-1111-1111", "이몽룡");
-    addBack(&head, "010-2222-3434", "성춘향");
-    addBack(&head, "010-3333-1212", "변학도");
+    // 삽입
+    push_back(head, 10);
+    push_back(head, 20);
+    push_back(head, 30);
+    print_list(head); // [ 10 20 30 ]
 
-    printList(head);
+    insert_at(head, 1, 15); // index 1에 15 삽입
+    print_list(head);       // [ 10 15 20 30 ]
 
-    printf("\n[수정] 010-3333-1212 -> (홍길동, 010-9999-9999)\n");
-    if (updateByPhone(head, "010-3333-1212", "홍길동", "010-9999-9999")) {
-        printf("수정 성공\n");
-    }
-    else {
-        printf("수정 실패(대상 없음)\n");
-    }
-    printList(head);
+    // 수정
+    update_at(head, 2, 99); // index 2 값을 99로 변경
+    print_list(head);       // [ 10 15 99 30 ]
 
-    printf("\n[삭제] 010-2222-3434 삭제\n");
-    if (deleteByPhone(&head, "010-2222-3434")) {
-        printf("삭제 성공\n");
-    }
-    else {
-        printf("삭제 실패(대상 없음)\n");
-    }
-    printList(head);
+    // 삭제
+    delete_at(head, 1);     // index 1 삭제(15 삭제)
+    print_list(head);       // [ 10 99 30 ]
 
-    freeList(head);
+    delete_value(head, 99); // 값 99 삭제
+    print_list(head);       // [ 10 30 ]
+
+    free_list(head);
     return 0;
 }
