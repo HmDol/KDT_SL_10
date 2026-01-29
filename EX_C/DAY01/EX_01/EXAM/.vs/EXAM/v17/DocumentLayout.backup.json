@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kdt008\\OneDrive\\BACK\\KDT_10SL\\EX_C\\DAY01\\EX_01\\EXAM\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7AA6D1AE-AFC5-45EE-8161-AA7FEA0608E8}|WORK\\WORK.vcxproj|C:\\Users\\kdt008\\OneDrive\\BACK\\KDT_10SL\\EX_C\\DAY01\\EX_01\\EXAM\\WORK\\0115_work_\uAE40\uD798\uCC2C.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7AA6D1AE-AFC5-45EE-8161-AA7FEA0608E8}|WORK\\WORK.vcxproj|solutionrelative:WORK\\0115_work_\uAE40\uD798\uCC2C.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 163,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "0115_work_\uAE40\uD798\uCC2C.c",
+              "DocumentMoniker": "C:\\Users\\kdt008\\OneDrive\\BACK\\KDT_10SL\\EX_C\\DAY01\\EX_01\\EXAM\\WORK\\0115_work_\uAE40\uD798\uCC2C.c",
+              "RelativeDocumentMoniker": "WORK\\0115_work_\uAE40\uD798\uCC2C.c",
+              "ToolTip": "C:\\Users\\kdt008\\OneDrive\\BACK\\KDT_10SL\\EX_C\\DAY01\\EX_01\\EXAM\\WORK\\0115_work_\uAE40\uD798\uCC2C.c",
+              "RelativeToolTip": "WORK\\0115_work_\uAE40\uD798\uCC2C.c",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAcwIAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-01-15T08:05:19.174Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

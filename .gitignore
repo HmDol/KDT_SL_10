@@ -1,7 +1,50 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+
+# =========================
+# Virtual Environment
+# =========================
+venv/
+.venv/
+
+# =========================
+# Data
+# =========================
+Data/
 *.csv
-*.excel
-*.js
-# Visual Studio
-.vs/
-*.zip
-*.zip
+
+# =========================
+# Models / Logs
+# =========================
+*.pt
+*.pth
+logs/
+runs/
+
+# =========================
+# IDE
+# =========================
+.vscode/
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+
+
+# Images (dataset / generated)
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.gif
+*.tiff
+
+images/
+imgs/
+dataset/
+data/images/
